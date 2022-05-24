@@ -1,0 +1,6 @@
+name: Modal Form
+description: Allows to render a form inside a modal
+type: module
+version: 1.0
+core_version_requirement: ^8 || ^9
+configure: modal_form.admin_settings

@@ -1,0 +1,8 @@
+<?php
+
+
+function pop_preprocess_node__page(array &$variables): void {
+    //Module name: 'popup', library name: 'popup'
+
+    $variables['#attached']['library'][] = 'popup/popup';
+}

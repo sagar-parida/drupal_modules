@@ -1,0 +1,66 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+function team_members_schema() {
+    $schema['team_members'] = array(
+        'description' => 'Stores name, emp id , email and location',
+        'fields' => array(
+            'id' => array(
+                'description' => 'The primary identifier for the record.',
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ),
+            'name' => array(
+                'description' => 'The member\'s name',
+                'type' => 'varchar',
+                'length' => 64,
+                'not null' => TRUE,
+            ),
+            'employeeNum' => array(
+                'description' => 'The member\'s employee ID',
+                'type' => 'varchar',
+                'length' => 64,
+                'not null' => TRUE,
+            ),
+            'email' => array(
+                'description' => 'The member\'s email',
+                'type' => 'varchar',
+                'length' => 64,
+                'not null' => TRUE,
+            ),
+            'location' => array(
+                'description' => 'The member\'s location',
+                'type' => 'varchar',
+                'length' => 64,
+                'not null' => TRUE,
+            ),
+            'created' => array(
+                'description' => 'Timestamp of when the member was added',
+                'type' => 'int',
+                'not null' => FALSE,
+            ),
+            'dateofbirth' => [
+                'mysql_type' => 'date',
+                'description'=>'store the dte of birth',
+                'not null'=> FALSE,
+            ],
+        ),
+        'primary key'=> array('id'),
+        'indexes' => [
+            'id'=>['id'],
+            'name'=>['name']
+        ],
+    );
+
+    return $schema;
+}
+
+/**
+ * Implements hook_uninstall()
+ */
+
+ function team_members_uninstall(){
+     \Drupal::database()->schema()->dropTable('team_members');
+ }

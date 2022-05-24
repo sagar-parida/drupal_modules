@@ -1,0 +1,21 @@
+testing:
+  version: 1.0
+  css:
+    theme:
+      https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css: { type: external}
+  js:
+    assets/js/test.js: {} 
+    https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js: { type: external, minified: true }
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+
+testing2:
+  version: 1.0
+  js:
+    assets/js/test2.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once

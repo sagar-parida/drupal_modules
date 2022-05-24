@@ -1,0 +1,11 @@
+popup:
+  version: 1.x
+  css:
+    theme:
+      css/popup.css: {}
+    js:
+      js/popup.js: {}
+    dependencies:
+      - core/jquery
+      - core/drupal.dialog.ajax
+      - core/jquery.form

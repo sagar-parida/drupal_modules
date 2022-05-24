@@ -1,0 +1,39 @@
+team_members.form:
+  path: '/team'
+  defaults:
+    _controller: '\Drupal\team_members\Controller\MemberController::createEmployee'
+    _title: 'Add Member'
+  requirements:
+    _permission: 'access content'
+
+team_members.getTeamList:
+  path: '/team-list'
+  defaults:
+    _controller: '\Drupal\team_members\Controller\MemberController::getTeamList'
+    _title: 'Member List'
+  requirements:
+    _permission: 'access content'
+
+team_members.edit_form:
+  path: '/edit-member/{id}'
+  defaults:
+    _form: '\Drupal\team_members\Form\EditEmployee'
+    _title: 'Edit Member'
+  requirements:
+    _permission: 'access content'
+
+team_members.deleteMember:
+  path: '/delete-member/{id}'
+  defaults:
+    _controller: '\Drupal\team_members\Controller\MemberController::deleteEmployee'
+    _title: 'Remove Member'
+  requirements:
+    _permission: 'access content'
+
+team_members.view_member:
+  path: '/view-member/{eno}'
+  defaults:
+    _controller: '\Drupal\team_members\Controller\MemberController::viewEmployee'
+    -title: 'Employee Details'
+  requirements:
+    _permission: 'access content'

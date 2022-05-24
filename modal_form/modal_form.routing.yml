@@ -1,0 +1,15 @@
+modal_form.form:
+  path: '/example_form'
+  defaults:
+    _form: 'Drupal\modal_form\Form\ExampleForm'
+    _title: 'Example Form'
+  requirements:
+    _permission: 'access content'
+
+modal_form.open_modal_form:
+  path: '/modal_form'
+  defaults:
+    _title: 'Modal Form'
+    _controller: '\Drupal\modal_form\Controller\ModalFormController::openModalForm'
+  requirements:
+    _permission: 'access content'

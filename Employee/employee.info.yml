@@ -1,0 +1,4 @@
+name: 'employee'
+type: module
+description: 'Module to define entity'
+core_version_requirement: ^8 || ^9

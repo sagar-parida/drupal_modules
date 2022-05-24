@@ -1,0 +1,10 @@
+name: Team Members
+description: Allows to store data of team Members
+package: Team Members
+type: module
+version: 1.0
+core_version_requirement: ^8 || ^9
+configure: team_members.admin_settings
+
+libraries:
+  - 'team_members/testing'

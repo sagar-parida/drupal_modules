@@ -1,0 +1,4 @@
+name: PopUp
+description: shows a popup
+type: module
+core_version_requirement: ^8 || ^9

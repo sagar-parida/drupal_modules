@@ -1,0 +1,16 @@
+
+
+<div>
+    <h2><b>{{items.name}}</b></h1><hr>
+    <pre>
+    <h2><b>Name:             |</b>  {{items.name}}</h2>
+    <h2><b>Employee Number:  |</b>  {{items.employeeNum}}</h2>
+    <h2><b>Date of birth:    |</b>  {{items.dateofbirth}}</h2>
+    <h2><b>Email:            |</b>  {{items.email}}</h2>
+    <h2><b>Location:         |</b>  {{items.location}}</h2>
+    <h2><b>Uploaded Document: </h2>
+    {% for index,link in items.links %}
+    <h2><b>1.<a href={{link}}>File {{index + 1}}</a></b></h2><br>
+    {% endfor %}
+    </pre>
+</div>

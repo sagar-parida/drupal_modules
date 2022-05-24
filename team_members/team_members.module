@@ -1,0 +1,42 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+function team_members_update_8003(){
+    $spec = [
+        'type' => 'varchar',
+        'description' => 'Store URI if the image uploaded',
+        'length' => 100,
+        'not null' => FALSE,
+    ];
+
+    $schema = Database::getConnection()->schema();
+    $schema->addField('team_members','uri',$spec);
+}
+
+function team_members_theme(){
+    return array(
+        'team_members'=>array(
+            'variables'=>array(
+                'items'=>[],
+                'title'=>''
+            )
+        ),
+        'view_members'=>array(
+                'variables'=>array(
+                    'items'=>[],
+                    'title'=>''
+                )
+        )
+    );
+}
+
+function team_members_page_attachments(array &$page) {
+    $page['#attached']['library'][] = 'team_members/testing2';
+}
+
+function team_members_element_info_alter(array &$types) {
+    if (isset($types['table'])) {
+      $types['table']['#attached']['library'][] = 'team_members/testing';
+    }
+  }

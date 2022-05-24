@@ -1,0 +1,7 @@
+DefaultForm.defaultForm:
+  path: '/default-form'
+  defaults:
+    _form: '\Drupal\DefaultForm\Form\DefaultForm'
+    _title: 'Default Form'
+  requirements:
+    _permission: 'access content'
